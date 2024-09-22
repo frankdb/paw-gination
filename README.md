@@ -1,4 +1,4 @@
-# Dog Breeds Viewer
+# Paw-gination: Dog Breeds Viewer
 
 This project is a full-stack application that displays information about various dog breeds. It consists of a React frontend and a Flask backend.
 
