@@ -1,35 +1,3 @@
-// import { Breed } from '../types';
-
-// const BREEDS_PER_PAGE = 15;
-// const API_BREEDS_PER_PAGE = 7;
-
-// export const getBreeds = async (page: number): Promise<Breed[]> => {
-//   try {
-//     const breeds: Breed[] = [];
-//     const apiCallsNeeded = Math.ceil(BREEDS_PER_PAGE / API_BREEDS_PER_PAGE);
-//     const startPage = (page - 1) * apiCallsNeeded + 1;
-
-//     for (let i = 0; i < apiCallsNeeded; i++) {
-//       const apiPage = startPage + i;
-//       console.log(`Fetching breeds for API page ${apiPage}`);
-//       const response = await fetch(
-//         `http://127.0.0.1:5000/api/dogs?page=${apiPage}`
-//       );
-//       if (!response.ok) {
-//         throw new Error(`HTTP error! status: ${response.status}`);
-//       }
-//       const data: Breed[] = await response.json();
-//       breeds.push(...data);
-//     }
-
-//     console.log(`Received ${breeds.length} breeds for page ${page}`);
-//     return breeds.slice(0, BREEDS_PER_PAGE);
-//   } catch (error) {
-//     console.error('Error fetching breeds:', error);
-//     throw error;
-//   }
-// };
-
 import { Breed } from '../types';
 
 const BREEDS_PER_PAGE = 15;
