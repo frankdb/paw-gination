@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 interface ListItemProps {
   breed: string;
   image: string | null;
+  idx: number;
 }
 
-export const ListItem: React.FC<ListItemProps> = ({ breed, image }) => {
+export const ListItem: React.FC<ListItemProps> = ({ breed, image, idx }) => {
   const [useDefaultImage, setUseDefaultImage] = useState(!image);
 
   const handleImageError = () => {
@@ -23,6 +24,7 @@ export const ListItem: React.FC<ListItemProps> = ({ breed, image }) => {
       <div className="ml-4 text-lg font-semibold">
         {breed || 'Unknown Breed'}
       </div>
+      <div className="ml-4 text-lg font-semibold">{idx + 1}</div>
     </div>
   );
 };
